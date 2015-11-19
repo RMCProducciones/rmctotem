@@ -1,0 +1,14 @@
+
+	    	{% set estiloFlip = 1 %}
+	    	
+	    	{% for categoria in categorias %}
+
+				<a class="flip{{estiloFlip}}" href="javascript:abrirCategoria('{{categoria.categoria.id}}');">{{categoria.categoria.nombre}}</a>
+
+				{% set estiloFlip = estiloFlip + 1 %}
+
+				{% if estiloFlip == 5 %}
+	    			{% set estiloFlip = 1 %}
+	    		{% endif %}
+
+	    	{% endfor %}	

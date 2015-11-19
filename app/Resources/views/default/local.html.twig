@@ -1,0 +1,39 @@
+	 		<div class="categorias-col2-titulo">
+					<div class="t3">
+						NIVEL {{nivel}}  -  {{ local.categoria.nombre }}
+					</div>
+			</div>
+		    <div class="categorias-col2-local">
+		    		<div>
+			    		<div class="logo-local"><img src="{{ asset('bundles/app/uploads/logos/'~local.logo) }}" /></div>
+			    		<div class="info-local">
+			    					<B>{{local.nombre}}</B>
+									<br>NIVEL: {{local.nivel}}
+									<br>LOCAL: {{local.local}}
+									<br>TELÉFONO: {{local.telefono}}
+						</div>
+					</div>
+					
+					<div id="divFoto" class="foto-local">
+
+						<a class="ver-foto-mapa" href="javascript:mostarMapa();">
+							<img src="{{ asset('bundles/app/images/ver-mapa.png') }}" />
+						</a>
+
+						<img src="{{ asset('bundles/app/uploads/locales/'~local.imagen) }}" />
+
+					</div>
+
+					<div id="divMapa" class="mapa-local">
+						
+						<img id="ubicacion" src="{{ asset('bundles/app/images/ubicacion.png') }}" style="top:calc({{local.y}}% - 7.2vw); left: calc( {{local.x}}% - 1% - 1.6vw);" />
+						
+						<a class="ver-foto-mapa" href="javascript:mostarFoto();">
+							<img src="{{ asset('bundles/app/images/ver-foto.png') }}" />
+						</a>
+
+						<img src="{{ asset('bundles/app/images/mapa-nivel-'~local.nivel~'.png') }}" />
+
+					</div>
+		    </div>
+			

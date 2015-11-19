@@ -1,0 +1,33 @@
+
+		<a class="atras imagen" href="javascript:abrirTiendas(0);"><img src="{{ asset('bundles/app/images/btn_atras.png') }}"/></a>
+
+		<input type="hidden" id="nivel" value="{{nivel}}" />
+
+		<div class="titulo-horizontal-icono imagen"><img src="{{ asset('bundles/app/images/ico-tiendas.png') }}"/></div>
+		<div class="titulo-horizontal">TIENDAS</div>
+
+		<div class="categorias-col1-titulo">
+				<div class="t3">
+					CATEGORÍAS
+				</div>
+				<input type="hidden" id="nivel" value="{{nivel}}" />
+		</div>
+
+	    <div class="categorias-col1">
+	    	{% set estiloFlip = 1 %}	
+	    	{% for categoria in categorias %}
+				<a class="flip{{estiloFlip}}" href="javascript:abrirLocales('{{categoria.id}}');">{{categoria.nombre}}</a>
+
+				{% set estiloFlip = estiloFlip + 1 %}
+				{% if estiloFlip == 3 %}
+	    			{% set estiloFlip = 1 %}
+	    		{% endif %}
+	    	{% endfor %}	    
+	    </div>
+
+	    <div id="divLocales">
+
+		 	{% render controller('AppBundle:Default:locales', {'nivel': nivel, 'idCategoria': categoriaSeleccioanada.id}) %}
+		 	
+		</div>
+	

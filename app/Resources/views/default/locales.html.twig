@@ -1,0 +1,26 @@
+	 		<div class="categorias-col2-titulo">
+					<div class="t3">
+						NIVEL {{nivel}}  -  {{ categoria.nombre }}
+					</div>
+			</div>
+		    <div class="categorias-col2">
+		    	{% set estiloFlip = 1 %}
+		    	
+		    	{% for local in locales %}
+
+						<a class="flip{{estiloFlip}}" href="javascript:abrirLocal('{{local.id}}');">
+							<div style="float:left;">{{local.nombre}}</div>
+							<div style="float:right;">NIVEL {{local.nivel}}<BR>LOCAL {{local.local}}</div>
+						</a>
+					{% set estiloFlip = estiloFlip + 1 %}
+					{% if estiloFlip == 3 %}
+		    			{% set estiloFlip = 1 %}
+		    		{% endif %}
+
+		    	{% else %}
+		    		<div class="t3">En éste nivel no se encontraror locales de la categoría seleccionada.</div>
+
+		    	{% endfor %}
+
+		    </div>
+	

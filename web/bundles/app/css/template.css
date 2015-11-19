@@ -1,0 +1,130 @@
+html {
+     height: 100%;
+}
+
+body {
+	overflow: auto;
+	font-family: 'Trebuchet MS';
+	background-image: url(../images/bg.jpg); background-size: 100% auto; background-repeat: no-repeat;
+}
+
+#divSuperior{
+	position: fixed;
+	width: 100%;
+	height: 9%;
+	top: 0%;
+	left: 0%;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+}
+
+#logo { position: fixed; top: 3%; left: 82%; width: 11.93%; z-index:10; }
+	#logo img { width:100%;}
+
+#divIconTouch{ position: fixed; top: 90%; left: 94%; width: 4.27%; height: 9.26%; }
+	#divIconTouch img { width:100%;}
+
+
+#divVideo{ position: absolute; top: 0%; left: 0%; width:100vw; height: 56.25vw; }
+
+video{  width:100vw; height: 56.25vw; /*max-width:600px;*/ }
+
+#cuenta{ position: absolute; top: 0%; right: 0%; font-family: 'Trebuchet MS'; font-size: 2vmin; color: #fff; z-index: 12;}
+
+.atras { position: absolute; top: 3vw; left: 2vw; width: 10vw; line-height: 2vw; text-decoration: none; font-size: 2vmin; color: #eee; z-index:10; }	 
+
+
+.home-col1{ position: absolute; top: 56.25vw; left: 0vw; width:60vw; height: 30vw;}
+
+.home-col2{ position: absolute; top: 56.25vw; left: 65vw; width:30vw; height: 30vw;}
+
+.imagen img{ width: 100%;}
+
+.titulo-vertical { position: absolute; top: 50vw; left: -16vw; font-family: 'Trebuchet MS'; font-size: 14vmin; color: #fff; 
+	-moz-transform: rotate(-90deg);  /* Firefox */
+  	-o-transform: rotate(-90deg);  /* Opera */
+   	-webkit-transform: rotate(-90deg);  /* Safari y Chrome */ 
+   	z-index: 10;
+   }
+.titulo-vertical-icono { position: absolute; top: 94vw; left: 2vw; width:16vw; height: auto;}
+
+
+.titulo-horizontal { position: absolute; top: 3vw; left: 35vw; font-family: 'Trebuchet MS'; font-size: 10vmin; color: #fff; z-index: 10;}
+.titulo-horizontal-icono { position: absolute; top: 3vw; left: 20vw; width:12vw; height: auto;}
+
+.niveles-col2-titulo{ position: absolute; top: 0vw; left: 20vw; width:20vw; height: 15vw; background-color: rgba(18, 76, 149, 0.8);}
+.niveles-col3-titulo{ position: absolute; top: 0vw; left: 44vw; width:56vw; height: 15vw; background-color: rgba(18, 76, 149, 0.8);}
+.t2 { margin-top: 5vw; margin-left: 2vw; font-family: 'Trebuchet MS'; font-size: 4vmin; color: #fff; }
+.t3 { margin-top: 5vw; margin-left: 2vw; font-family: 'Trebuchet MS'; font-size: 3vmin; color: #fff; }
+
+.niveles-col2{ position: absolute; top: 15vw; left: 20vw; width:20vw; height: 97.5vw; overflow: hidden; }
+
+.niveles-col2 a { float: left; width: 100%; height: 33%; font-family: 'Trebuchet MS'; text-decoration: none; font-size: 3vmin; color: #eee;}
+.nivel{ padding-top:20vw; text-align: center;}
+.nivel img { width: 7vw;}
+
+
+.niveles-col3{ position: relative; top: 15vw; left: 44vw; width:56vw; height: 97.5vw; overflow: auto; }
+
+.niveles-col3 a { float: left; width: 26vw; height: 6.1vw; font-family: 'Trebuchet MS'; text-decoration: none; font-size: 2vmin; color: #eee; padding: 1vw; }
+	.flip1, .flip4 { background-color: rgba(18, 76, 149, 0.9); }
+	.flip2, .flip3 { background-color: rgba(18, 76, 149, 0.7); }
+
+	.flip1:hover, .flip2:hover, .flip3:hover, .flip4:hover, .active { background-color: rgba(240, 207, 0, 0.7); }
+
+.categorias-col1-titulo{ position: absolute; top: 15vw; left: 0vw; width:26vw; height: 15vw; background-color: rgba(18, 76, 149, 0.8);}
+.categorias-col1 {position: absolute; top: 35vw; left: 0vw; width:26vw; height: 77.5vw; overflow: auto; overflow-x: hidden; }
+.categorias-col1 a {float: left; width: 24vw; height: 5vw; font-family: 'Trebuchet MS'; text-decoration: none; font-size: 2vmin; color: #eee; padding: 1vw; }
+
+.categorias-col2-titulo{ position: absolute; top: 15vw; left: 30vw; width:65vw; height: 15vw; background-color: rgba(18, 76, 149, 0.8);}
+.categorias-col2 {position: absolute; top: 35vw; left: 30vw; width:65vw; height: 77.5vw; overflow: auto; overflow-x: hidden; }
+.categorias-col2 a {float: left; width: 61vw; height: 6vw; font-family: 'Trebuchet MS'; text-decoration: none; font-size: 2vmin; color: #eee; padding: 2vw; padding-top: 4vw; }
+.categorias-col2-local {position: absolute; top: 35vw; left: 30vw; width:65vw; height: 77.5vw; overflow: auto; overflow-x: hidden; }
+
+
+.logo-local{ float: left; width: 28vw; height: 12vw; text-align: center; background-color: rgba(255, 255, 255, 1); padding: 1vw; }
+.logo-local img{ max-width: 100%; max-height: 12vw}
+
+.info-local{ float: right; width: 28vw; height: 10vw; font-family: 'Trebuchet MS'; text-decoration: none; font-size: 1.8vmin; color: #eee; padding: 2vw; background-color: rgba(18, 76, 149, 0.9);}
+ 
+.foto-local{position: absolute; top:0vw; width: 65vw; height: 60vw; margin-top: 16vw; text-align: center; background-color: rgba(18, 76, 149, 0.8); }
+.foto-local img{ max-width: 100%; max-height: 60vw}
+
+.mapa-local{position: absolute; top:0vw; width: 65vw; height: auto; margin-top: 16vw; text-align: center; background-color: rgba(18, 76, 149, 0.8); display: none; }
+.mapa-local img{ max-width: 100%; max-height: 60vw}
+
+.ver-foto-mapa {position: absolute; top:1vw; right: 1vw; width: 5vw; height: auto; z-index: 20; }
+	.ver-foto-mapa img{ width: 100%; }
+
+#ubicacion {position: absolute; width: 8vw; height: auto;}
+
+.cartelera-col2{ position: absolute; top: 15vw; left: 20vw; width:80vw; height: 97.5vw; color: #FFF; font-family: 'Trebuchet MS'; font-size: 1.4vmin; overflow: auto; }
+.cartelera-titulo-vertical { position: absolute; top: 50vw; left: -26vw; font-family: 'Trebuchet MS'; font-size: 14vmin; color: #fff; 
+	-moz-transform: rotate(-90deg);  /* Firefox */
+  	-o-transform: rotate(-90deg);  /* Opera */
+   	-webkit-transform: rotate(-90deg);  /* Safari y Chrome */ 
+   	z-index: 10;
+   }
+.cartelera-texto{ padding-right: 5vw; font-size: 1.2vmin;} 
+.t4 { margin-top: 0vw; margin-left: 2vw; font-family: 'Trebuchet MS'; font-size: 3vmin; color: #fff; }
+
+
+.noticias-titulo-vertical { position: absolute; top: 40vw; left: -18vw; font-family: 'Trebuchet MS'; font-size: 14vmin; color: #fff; 
+	-moz-transform: rotate(-90deg);  /* Firefox */
+  	-o-transform: rotate(-90deg);  /* Opera */
+   	-webkit-transform: rotate(-90deg);  /* Safari y Chrome */ 
+   	z-index: 10;
+   }
+
+.promociones-titulo-vertical { position: absolute; top: 50vw; left: -28vw; font-family: 'Trebuchet MS'; font-size: 12vmin; color: #fff; 
+	-moz-transform: rotate(-90deg);  /* Firefox */
+  	-o-transform: rotate(-90deg);  /* Opera */
+   	-webkit-transform: rotate(-90deg);  /* Safari y Chrome */ 
+   	z-index: 10;
+   }
+
+@media screen and (max-width: 480px) {
+   /* Aquí van las reglas CSS necesarias */
+   
+}

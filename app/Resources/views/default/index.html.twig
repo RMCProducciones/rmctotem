@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>TOTEM</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!--link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css"-->
+	
+	<link href="{{ asset('bundles/app/css/template.css') }}" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="{{ asset('bundles/app/js/jquery-1.11.3.js') }}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ asset('bundles/app/js/jQueryTween-aio-min.js') }}"></script>
+	    
+</head>
+<body rightmargin="0" topmargin="0" leftmargin="0" bottommargin="0">
+	
+	<input type="hidden" id="path" value="{{ path('homepage') }}" />
+	
+	<!--div id="logo"><img src="{{ asset('bundles/app/images/logo.png') }}"></div-->
+	
+	<div id="divVideo">
+		<div id="errorMsg" style="color:Red;" ></div>				
+	  <!-- Video -->
+	  <video id="Video1">
+		<!--source src="videos/exito.3gp" type="video/3gp">
+		<source src="videos/exito.webm" type="video/webm">
+		<source src="videos/exito.mp4" type="video/mp4"-->
+	  </video>
+			
+	</div>
+
+	<div id="divContenido">
+	    <div class="home-col1 imagen">
+	    
+	    	<a href="javascript:abrirCartelera(1);"><img src="{{ asset('bundles/app/uploads/cartelera/poster-sin-escape11221.jpg') }}"></a>
+	    	<div style="background-color: #fff;"><img src="{{ asset('bundles/app/images/logo.png') }}"></div>
+	    
+	    </div>
+	    <div class="home-col2 imagen">
+
+			<a href="javascript:abrirTiendas(1);"><img src="{{ asset('bundles/app/images/tiendas.jpg') }}"></a>
+	    	<a href="javascript:abrirCartelera(1);"><img src="{{ asset('bundles/app/images/cartelera.jpg') }}"></a>
+	    	<a href="javascript:abrirPromociones(1);"><img src="{{ asset('bundles/app/images/promos.jpg') }}"></a>
+	    	<a href="javascript:abrirNoticias(1);"><img src="{{ asset('bundles/app/images/eventos.jpg') }}"></a>
+
+	    </div>
+	</div>
+
+	
+	<!--div id="divSuperior"></div-->
+	<div id="divContenido">&nbsp;</div>
+	
+	<!--div id="divIconTouch"><img src="{{ asset('bundles/app/images/touch.png') }}"></div-->
+	
+	<!--button id="loadVideo" >play</button-->
+	<div id="cuenta"></div>
+
+	<script src="{{ asset('bundles/app/js/general.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('bundles/app/js/frontend.js') }}" type="text/javascript"></script>
+	
+</body>
+</html>
+<script>init();//abrir("template/index.php", 'divTemplate', "", iniciar);</script>

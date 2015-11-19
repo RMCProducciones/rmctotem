@@ -1,0 +1,52 @@
+
+		<a class="atras imagen" href="javascript:abrirInicio();"><img src="{{ asset('bundles/app/images/btn_atras.png') }}"/></a>
+
+		<div class="niveles-col1 imagen">
+			<div class="titulo-vertical-icono"><img src="{{ asset('bundles/app/images/ico-tiendas.png') }}"/></div>
+			<div class="titulo-vertical">TIENDAS</div>
+		</div>
+
+		<div class="niveles-col2-titulo">
+				<div class="t2">
+					NIVELES
+				</div>
+				<input type="hidden" id="nivel" value="1" />
+		</div>
+
+	    <div class="niveles-col2 imagen">
+	    	
+			<a id="nivel1" class="flip1 active" href="javascript:seleccionarNivel(1);" >
+				<div class="nivel">
+					<img src="{{ asset('bundles/app/images/ico-nivel1.png') }}"/>
+		    		<br>NIVEL 1
+		    	</div>
+		    </a>
+		    <a id="nivel2" class="flip2" href="javascript:seleccionarNivel(2);">
+		    	<div class="nivel">
+		    		<img src="{{ asset('bundles/app/images/ico-nivel2.png') }}"/>
+		    		<br>NIVEL 2
+		    	</div>
+	    	</a>
+	    	<a id="nivel3" class="flip1" href="javascript:seleccionarNivel(3);">
+		    	<div class="nivel">
+		    		<img src="{{ asset('bundles/app/images/ico-nivel3.png') }}"/>
+		    		<br>NIVEL 3
+		    	</div>
+	    	</a>
+	    
+	    </div>
+
+
+	    <div class="niveles-col3-titulo">
+				<div class="t2">
+					NIVEL <span id="spanNivel">1</span> - CATEGORÍAS 
+				</div>
+				<input type="hidden" id="nivel" value="1" />
+		</div>
+
+	    <div id="divCategorias" class="niveles-col3 imagen">
+
+	    	{% render controller('AppBundle:Default:categoriasNivel', {'nivel': '1'}) %}
+
+	    </div>
+	
