@@ -42,8 +42,10 @@ CREATE TABLE `administrador` (
 --
 -- Estructura de tabla para la tabla `categoria`
 --
-
+DROP TABLE IF EXISTS `local`;
 DROP TABLE IF EXISTS `categoria`;
+
+
 CREATE TABLE `categoria` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -86,7 +88,7 @@ INSERT INTO `categoria` (`id`, `nombre`, `fecha_creacion`) VALUES
 -- Estructura de tabla para la tabla `local`
 --
 
-DROP TABLE IF EXISTS `local`;
+
 CREATE TABLE `local` (
   `id` int(11) NOT NULL,
   `categoria_id` int(11) DEFAULT NULL,
