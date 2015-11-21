@@ -1,2 +1,2 @@
 git pull
-rd /q /s app/cache/prod
+rd /q /s app\cache\prod
