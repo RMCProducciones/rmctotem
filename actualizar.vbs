@@ -1,2 +1,2 @@
 set objshell = createobject("wscript.shell")
-objshell.run "actualizar.bat",vbhide
+objshell.run "C:\xampp\htdocs\rmctotem\actualizar.bat",vbhide
