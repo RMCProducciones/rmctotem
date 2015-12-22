@@ -11,7 +11,8 @@
 
 	<script type="text/javascript" src="{{ asset('bundles/app/js/jquery-1.11.3.js') }}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="{{ asset('bundles/app/js/jQueryTween-aio-min.js') }}"></script>
+	<!--script type="text/javascript" src="{{ asset('bundles/app/js/jQueryTween-aio-min.js') }}"></script-->
+	<script type="text/javascript" src="{{ asset('bundles/app/js/jstween-1.2/jstween-1.2.min.js') }}"></script>
 	    
 </head>
 <body rightmargin="0" topmargin="0" leftmargin="0" bottommargin="0">
@@ -20,33 +21,36 @@
 	
 	<!--div id="logo"><img src="{{ asset('bundles/app/images/logo.png') }}"></div-->
 	
-	<div id="divVideo">
+	<div id="divVideox">
 		<div id="errorMsg" style="color:Red;" ></div>				
 	  <!-- Video -->
-	  <video id="Video1">
-		<!--source src="videos/exito.3gp" type="video/3gp">
-		<source src="videos/exito.webm" type="video/webm">
-		<source src="videos/exito.mp4" type="video/mp4"-->
-	  </video>
+	  
 			
 	</div>
 
+	<video id="Video1" onclick="ajustarVideo()">
+		<!--source src="videos/exito.3gp" type="video/3gp">
+		<source src="videos/exito.webm" type="video/webm">
+		<source src="videos/exito.mp4" type="video/mp4"-->
+	 </video>
+
 	<div id="divContenido">
-	    <div class="home-col1 imagen">
-	    
-	    	<a href="javascript:abrirCartelera(1);"><img src="{{ asset('bundles/app/uploads/noticias/banner 5v.jpg') }}"></a>
-	    	<div style="background-color: #fff;"><img src="{{ asset('bundles/app/images/logo.png') }}"></div>
-	    
-	    </div>
-	    <div class="home-col2 imagen">
 
-			<a href="javascript:abrirTiendas(1);"><img src="{{ asset('bundles/app/images/tiendas.jpg') }}"></a>
-	    	<a href="javascript:abrirCartelera(1);"><img src="{{ asset('bundles/app/images/cartelera.jpg') }}"></a>
-	    	<a href="javascript:abrirPromociones(1);"><img src="{{ asset('bundles/app/images/promos.jpg') }}"></a>
-	    	<a href="javascript:abrirNoticias(1);"><img src="{{ asset('bundles/app/images/eventos.jpg') }}"></a>
-
-	    </div>
 	</div>
+
+
+	<div id="divTouch" onclick="ajustarVideo()">
+		<img id="touch" src="{{ asset('bundles/app/images/touch.jpg') }}">
+	</div>
+
+    <div id="iconos">
+
+		<a href="javascript:abrirTiendas(1);"><img src="{{ asset('bundles/app/images/tiendas.jpg') }}"></a>
+    	<a href="javascript:abrirPromociones(1);"><img src="{{ asset('bundles/app/images/promos.jpg') }}"></a>
+    	<a href="javascript:abrirNoticias(1);"><img src="{{ asset('bundles/app/images/eventos.jpg') }}"></a>
+    	<a href="javascript:abrirCartelera(1);"><img src="{{ asset('bundles/app/images/cartelera.jpg') }}"></a>
+
+    </div>
 
 	
 	<!--div id="divSuperior"></div-->

@@ -4,6 +4,7 @@ url_video = "http://127.0.0.1/rmctotem/web";
 
 //document.oncontextmenu = function(){return false}
 
+var modo = 1;
 
 var cuenta = 121;
 var cuentaRecarga = 1800;
@@ -27,7 +28,55 @@ function resetCuenta(){
 	cuenta = 121;
 }
 
+function ajustarVideo(){
 
+	//$('#Video1').css({left: 0});
+	//$('#Video1').jQueryTween({ to: { width: '74%' }, yoyo: false });
+	if(modo != 3){
+		$('#Video1').tween({
+		   left:{
+		      start: 0,
+		      stop: 5,
+		      time: 0,
+		      duration: 1,
+		      units: 'vw'
+		   },
+		   width:{
+		      start: 100,
+		      stop: 90,
+		      time: 0,
+		      units: 'vw',
+		      duration: 1,
+		      effect:'easeInOut'
+		   },
+		    bottom:{
+		      start: 0,
+		      stop: 25,
+		      time: 0,
+		      units: 'vw',
+		      duration: 1,
+		      effect:'easeInOut'
+		   }
+		}).play();
+
+		
+		$('#divTouch').tween({
+		   top:{
+		      start: 0,
+		      stop: -10,
+		      time: 0,
+		      duration: 1,
+		      units: 'vh'
+		   }
+		}).play();
+	}
+	else{
+		restaurarVideo();
+
+	}
+
+	modo = 2;
+}
 
 
  function init() {
@@ -105,10 +154,10 @@ function resetCuenta(){
 		
 		if (myVideo.canPlayType('video/3pg'))
 			extensionVideo='.3pg';
-		else if (myVideo.canPlayType('video/webm'))
+		/*else if (myVideo.canPlayType('video/webm'))
 			extensionVideo='.webmsd.webm';
 		else if (myVideo.canPlayType('video/ogg'))
-			extensionVideo='.oggtheora.ogv';
+			extensionVideo='.oggtheora.ogv';*/
 		else if (myVideo.canPlayType('video/mp4'))
 			extensionVideo='.mp4.mp4';
 			
@@ -148,17 +197,111 @@ function mostrar(id, estilo)
 function abrirInicio(){
 	resetCuenta();
 
-	$('#divVideo').jQueryTween({ to: { translate: { y: '0%' } }, yoyo: false });
-	abrir(url_app, "divContenido");
+	//$('#divVideo').jQueryTween({ to: { translate: { y: '0%' } }, yoyo: false });
+	restaurarVideo();
+	$('#divContenido').html("");
+	
 }
 
+function restaurarVideo(){
+	//$('#divVideo').jQueryTween({ to: { translate: { y: '200%' } }, yoyo: false });
+	$('#Video1').tween({
+	   left:{
+	      start: 0,
+	      stop: 0,
+	      time: 0,
+	      duration: 1,
+	      units: 'px'
+	   },
+	   width:{
+	      start: 38,
+	      stop: 100,
+	      time: 0,
+	      units: 'vw',
+	      duration: 1,
+	      effect:'easeInOut'
+	   }
+	}).play();
+
+	$('#iconos').tween({ 
+	   width:{
+	      start: 56,
+	      stop: 100,
+	      time: 0,
+	      units: 'vw',
+	      duration: 1,
+	      effect:'easeInOut'
+	   }
+	}).play();
+
+	$('#divTouch').tween({
+	   top:{
+	      start: -10,
+	      stop: 0,
+	      time: 0,
+	      duration: 1,
+	      units: 'vh'
+	   }
+	}).play();
+
+	$('#divContenido').html("");
+
+	modo = 1;
+
+}
+
+
+function minimizarVideo(){
+	//$('#divVideo').jQueryTween({ to: { translate: { y: '200%' } }, yoyo: false });
+	if(modo != 3)
+		$('#Video1').tween({
+		   left:{
+		      start: 5,
+		      stop: 0,
+		      time: 0,
+		      duration: 1,
+		      units: 'px'
+		   },
+		   width:{
+		      start: 90,
+		      stop: 38,
+		      time: 0,
+		      units: 'vw',
+		      duration: 1,
+		      effect:'easeInOut'
+		   },
+		   bottom:{
+		      start: 25,
+		      stop: 0,
+		      time: 0,
+		      units: 'vw',
+		      duration: 1,
+		      effect:'easeInOut'
+		   }
+		}).play();
+
+	if(modo != 3)
+		$('#iconos').tween({ 
+		   width:{
+		      start: 100,
+		      stop: 56,
+		      time: 0,
+		      units: 'vw',
+		      duration: 1,
+		      effect:'easeInOut'
+		   }
+		}).play();
+
+	modo = 3;
+}
 
 function abrirTiendas(bajarVideo){
 	resetCuenta();
 	
 	//$( "divVideo" ).html( "Next Step..." )
 	if(bajarVideo)
-		$('#divVideo').jQueryTween({ to: { translate: { y: '200%' } }, yoyo: false });
+		minimizarVideo();
+		
 
 	//document.getElementById("divVideo").style.top = "120vw";
 
@@ -170,7 +313,7 @@ function abrirCartelera(bajarVideo){
 	
 	//$( "divVideo" ).html( "Next Step..." )
 	if(bajarVideo)
-		$('#divVideo').jQueryTween({ to: { translate: { y: '200%' } }, yoyo: false });
+		minimizarVideo();
 
 	//document.getElementById("divVideo").style.top = "120vw";
 
@@ -182,7 +325,7 @@ function abrirNoticias(bajarVideo){
 	
 	//$( "divVideo" ).html( "Next Step..." )
 	if(bajarVideo)
-		$('#divVideo').jQueryTween({ to: { translate: { y: '200%' } }, yoyo: false });
+		minimizarVideo();
 
 	//document.getElementById("divVideo").style.top = "120vw";
 
@@ -194,7 +337,7 @@ function abrirPromociones(bajarVideo){
 	
 	//$( "divVideo" ).html( "Next Step..." )
 	if(bajarVideo)
-		$('#divVideo').jQueryTween({ to: { translate: { y: '200%' } }, yoyo: false });
+		minimizarVideo();
 
 	//document.getElementById("divVideo").style.top = "120vw";
 
