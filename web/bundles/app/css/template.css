@@ -36,6 +36,7 @@ body {
 #divVideo{ position: absolute; bottom: 0%; left: 0%; width:100vw; height: 92vh; z-index: 20 }
 
 video{position: absolute; bottom: 0%; left: 0%; width:100vw; height: auto; z-index: 20; /*max-width:600px;*/ }
+.cartelera-texto video{position: relative; bottom: 10%}
 
 #cuenta{ position: absolute; top: 0%; right: 0%; font-family: 'Trebuchet MS'; font-size: 2vmin; color: #fff; z-index: 12;}
 
