@@ -1,6 +1,6 @@
 url_app = document.getElementById("path").value;
 
-url_video = "http://localhost:8080/rmctotem/web";
+url_video = "http://127.0.0.1/rmctotem/web";
 
 //document.oncontextmenu = function(){return false}
 
